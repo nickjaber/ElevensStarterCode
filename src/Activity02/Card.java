@@ -61,6 +61,7 @@ public class Card {
 	 */
 	public int pointValue() {
 		return pointValue;
+                //new code
 	}
 
 	/** Compare this card with the argument.
