@@ -12,6 +12,8 @@ public class Deck {
 	 * cards contains all the cards in the deck.
 	 */
 	private List<Card> cards;
+int [] suits2 = new int[suits.length()];
+int [] values2 = new int[suits.length()];
 
 	/**
 	 * size is the number of not-yet-dealt cards.
@@ -19,6 +21,7 @@ public class Deck {
 	 * The next card to be dealt is at size - 1.
 	 */
 	private int size;
+        int x = -1;
 
 
 	/**
@@ -40,6 +43,12 @@ public class Deck {
 	 */
 	public boolean isEmpty() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                if (suits.length()==0){
+                    return true;
+                }
+                else{
+                    return false;
+                }
 	}
 
 	/**
@@ -48,6 +57,7 @@ public class Deck {
 	 */
 	public int size() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                return suits.length();
 	}
 
 	/**
@@ -65,6 +75,12 @@ public class Deck {
 	 */
 	public Card deal() {
 		/* *** TO BE IMPLEMENTED IN ACTIVITY 2 *** */
+                x++;
+                suits2 [x] = suits[x];
+                suits[x]="";
+                values2 [x]= values[x];
+                return suits2[x] + " "+values2[x];
+
 	}
 
 	/**
